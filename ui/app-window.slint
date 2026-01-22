@@ -1,18 +1,27 @@
-import { Button, VerticalBox } from "std-widgets.slint";
+import { Button, VerticalBox, HorizontalBox, TabWidget } from "std-widgets.slint";
+import {Counter} from "./counter.slint";
+import {Animation} from "./animation.slint";
+import {Stretch} from "./stretch.slint";
 
 export component AppWindow inherits Window {
     in-out property <int> counter: 42;
     callback request-increase-value();
-    VerticalBox {
-        Text {
-            text: "Counter: \{root.counter}";
-        }
+    callback request-decrease-value();
 
-        Button {
-            text: "Increase value";
-            clicked => {
-                root.request-increase-value();
-            }
+    default-font-size: 16px;
+    TabWidget {
+        Tab{
+            title: "Counter";
+            Counter {}
+        }
+        Tab {
+            title: "Animation";
+            Animation {}
+        }
+        Tab {
+            title: "Stretch";
+            Stretch {}
         }
     }
+
 }

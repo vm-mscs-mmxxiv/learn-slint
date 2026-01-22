@@ -1,6 +1,10 @@
 # Slint Rust Template
 
-A template for a Rust application that's using [Slint](https://slint.rs/) for the user interface.
+A Learning Project to get on track with Slint to create UI. This Project use a template for a Rust application that's using [Slint](https://slint.rs/) for the user interface.
+
+The Project is not ment to be complex or difficult it is a first attempt to try how Slint works.
+
+> After this note I didn't change anything from original repository.
 
 ## About
 

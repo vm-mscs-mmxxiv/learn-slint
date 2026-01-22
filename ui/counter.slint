@@ -1,0 +1,42 @@
+
+ import { VerticalBox, HorizontalBox, Button } from "std-widgets.slint";
+export component Counter inherits VerticalBox {
+     
+
+        preferred-height: root.height;
+        preferred-width: root.width;
+        private property <int> counter: 0;
+
+        
+        HorizontalBox {
+            height: 75%;
+            alignment: center;
+            Text {
+                font-size: 18px;
+                text: "Counter: \{counter}";
+            }
+        }
+        HorizontalBox {
+            height:0.25%;
+            alignment: space-around;
+
+        Button {
+            preferred-width: parent.width * 35.0%;
+            height: 40.0%;
+            text: "Decrease value";
+            clicked => {
+                counter -= 1;
+            }
+        }
+        Button {
+            text: "Increase value";
+            preferred-width: parent.width * 35.0%;
+            height: 80.0px;
+            clicked => {
+                counter += 1;
+            }
+        }
+
+        }
+
+}
